@@ -48,7 +48,7 @@ def main():
             model.visualize_latent_space(test_loader, lambda_val, temp)
             model.visualize_reconstructions(test_batch.cpu(), lambda_val, temp)
             
-            model.save_model(f'autoencoder_lambda_{lambda_val}_temp_{temp}.pth')
+            model.save_model(f'.models/autoencoder_lambda_{lambda_val}_temp_{temp}.pth')
 
 if __name__ == "__main__":
     main()

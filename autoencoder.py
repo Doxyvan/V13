@@ -137,7 +137,7 @@ class Autoencoder(nn.Module):
             
             plt.suptitle(f'Реконструкции (λ={lambda_val}, t={temperature}))')
             plt.tight_layout()
-            plt.savefig(f'reconstructions_lambda_{lambda_val}_temp_{temperature}.png')
+            plt.savefig(f'.results/reconstructions_lambda_{lambda_val}_temp_{temperature}.png')
             #plt.show()
             plt.close()
     
@@ -164,7 +164,7 @@ class Autoencoder(nn.Module):
         scatter = plt.scatter(latent_2d[:, 0], latent_2d[:, 1], c=labels, cmap='tab10', alpha=0.6)
         plt.colorbar(scatter)
         plt.title(f'Латентное пространство (λ={lambda_val}, t={temperature})')
-        plt.savefig(f'latent_space_lambda_{lambda_val}_temp_{temperature}.png')
+        plt.savefig(f'.results/latent_space_lambda_{lambda_val}_temp_{temperature}.png')
         #plt.show()
         plt.close()
     
